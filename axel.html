@@ -1,0 +1,55 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>axel mauricio</title>
+
+  <style>
+    body {
+      background-color: #E8F5E9;
+      font-family: Arial;
+    }
+
+    h1 {
+      color: #2E7D32;
+    }
+
+    input {
+      background-color: #C8E6C9;
+      padding: 10px;
+    }
+
+    button {
+      background-color: #388E3C;
+      color: white;
+      padding: 10px;
+      border: none;
+    }
+
+    li {
+      background-color: #A5D6A7;
+      margin: 5px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>agrega un mensaje positivo</h1>
+
+<input type="text" id="apunte">
+<button onclick="agregarApunte()">Agregar</button>
+
+<ul id="lista"></ul>
+
+<script>
+function agregarApunte() {
+  let apunte = document.getElementById("apunte").value;
+  let li = document.createElement("li");
+  li.textContent = apunte;
+  document.getElementById("lista").appendChild(li);
+}
+</script>
+
+</body>
+</html>
